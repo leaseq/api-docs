@@ -17,8 +17,8 @@ Update the status of current application that’s been submitted to the LeaseQ P
 
 ```json
 {
-    "status": "string | reqired | The application status - LEAD, APPROVED, TODO",
-    "lost_reason": "string | optional | The reason if lost"
+    "status": "string | required | The application status - Funded, Lost, PO Issued, Prefunding Released, Contract In, Contract Out, Approved, App Submitted, Decline, App In, Leads, 
+    "lost_reason": "string | optional | The reason if status is Lost"
 }
 ```
 

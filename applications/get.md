@@ -22,14 +22,14 @@ Get information (status) of current application that’s been submitted to the L
 ```json
 {
     "app_id": "guid | The id of the new application",
-    "status": "string | The application status - LEAD, APPROVED, TODO", 
+    "status": "string | required | The application status - Funded, Lost, PO Issued, Prefunding Released, Contract In, Contract Out, Approved, App Submitted, Decline, App Widget Lead, New", 
     "term" : "string | The term length",
     "lender" : { 
         "name" : "string | The lender name" 
     },
-    "signed_date" : "TODO",
-    "approved_date" : "TODO",
-    "funded_date" : "TODO",
+    "signed_date" : "1/1/2001",
+    "approved_date" : "1/1/2001",
+    "funded_date" : "1/1/2001",
     "products " : [{ 
         "product_code": "string | required | The product code",
         "quantity": "number | optional | The product quantity",

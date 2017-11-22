@@ -17,7 +17,7 @@ Submit a new credit application to LeaseQ Platform.
 
 ```json
 {
-    "type": "string | required | The application type - business, TODO",
+    "type": "string | required | The application type - business, consumer, corporate, nonprofit, municipal, ",
     "total_amount": "number | optional | The total amount",
 
     "products": [{
@@ -122,7 +122,7 @@ Submit a new credit application to LeaseQ Platform.
 ```json
 {
     "app_id": "guid | The id of the new application",
-    "status": "string | The status of the new application - LEAD, TODO",
+    "status": "string | required | The status of the new application - Funded, Lost, PO Issued, Prefunding Released, Contract In, Contract Out, Approved, App Submitted, Decline, App Widget Lead, New", 
 }
 ```
 
