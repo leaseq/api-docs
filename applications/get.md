@@ -43,25 +43,23 @@ Get information (status) of current application that’s been submitted to the L
 ```json
 {
     "app_id": "GUID",
-    "status": "APPROVED", 
-    "term" : "60",
-    "lender" : { 
-        "name" : "ACME Lending" 
+    "status": "APPROVED",
+    "term": "60",
+    "lender": {
+        "name": "ACME Lending"
     },
-    "signed_date" : "",
-    "approved_date" : "",
-    "funded_date" : "",
-    "products " : [  
-    { 
-        "product_id " : "SBIR_Pr_Code ",
-        "quantity" : 3,
-        "discounted_price ": 4000 
-    },
-	{
-        "product_id" : "SBIR_Pr_Code",
-        "quantity " : 2,
-        "discounted_price ": 3000 }
-    ], 
+    "signed_date": "",
+    "approved_date": "",
+    "funded_date": "",
+    "products ": [{
+        "product_id ": "SBIR_Pr_Code ",
+        "quantity": 3,
+        "discounted_price ": 4000
+    }, {
+        "product_id": "SBIR_Pr_Code",
+        "quantity ": 2,
+        "discounted_price ": 3000
+    }],
 }
 ```
 
