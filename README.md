@@ -23,6 +23,6 @@ Endpoints for authentication.
 Endpoints for managing LeaseQ credit applications.
 
 * [Create an Application](applications/post.md) : `POST /applications`
-* [Update an Application](applications/put.md) : `PUT /applications/{application_id}`
+* [Update an existing Application](applications/put.md) : `PUT /applications/{application_id}`
 * [Retrieve an Application](applications/get.md) : `GET /applications/{application_id}`
-* [Update an Application](applications/patch.md) : `PATCH /applications/{application_id}`
+* [Update the status of an Application](applications/patch.md) : `PATCH /applications/{application_id}`
