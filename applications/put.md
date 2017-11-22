@@ -1,4 +1,4 @@
-# PUT /applications
+# PUT /applications/{application_id}
 
 Update an existing application in the LeaseQ Platform.
 
