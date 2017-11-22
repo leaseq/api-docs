@@ -5,10 +5,10 @@ Following document outlines the LeaseQ API usage along with authentication.  Thi
 ## Environments
 
 ### Production
-https://dashq.leaseq.com/api
+ht&#8203;tps://dashq.leaseq.com/api
 
 ### Dev/Test
-http://dashq-demo.herokuapp.com/api
+ht&#8203;tp://dashq-demo.leaseq.com/api
 
 ## APIs
 
