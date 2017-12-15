@@ -25,7 +25,7 @@ Update an existing application in the LeaseQ Platform.
         "name": "string | required | The product name",
         "description": "string | required | The product description",
         "quantity": "number | optional | The product quantity",
-        "price": "number | required | The product price",
+        "price": "number | required | The product price"
     }],
 
     "billing": [{
@@ -53,7 +53,7 @@ Update an existing application in the LeaseQ Platform.
         "city": "string | required | The guarantor's city",
         "state": "string | required | The guarantor's state/prov",
         "zip": "string | required | The guarantor's zip/postal",
-        "percentage_owned": "string | required | The percentage owned",
+        "percentage_owned": "string | required | The percentage owned"
     }]
 }
 ```
@@ -122,7 +122,7 @@ Update an existing application in the LeaseQ Platform.
 ```json
 {
     "app_id": "guid | The id of the application",
-    "status": "string | The status of the new application - Funded, Lost, PO Issued, Prefunding Released, Contract In, Contract Out, Approved, App Submitted, Decline, App Widget Lead, New", ",
+    "status": "string | The status of the new application - Funded, Lost, PO Issued, Prefunding Released, Contract In, Contract Out, Approved, App Submitted, Decline, App Widget Lead, New"
 }
 ```
 
@@ -131,7 +131,7 @@ Update an existing application in the LeaseQ Platform.
 ```json
 {
     "app_id": "00000000-0000-0000-0000-000000000000",
-    "status": "LEAD",
+    "status": "LEAD"
 }
 ```
 

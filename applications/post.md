@@ -17,7 +17,7 @@ Submit a new credit application to LeaseQ Platform.
 
 ```json
 {
-    "type": "string | required | The application type - business, consumer, corporate, nonprofit, municipal, ",
+    "type": "string | required | The application type - business, consumer, corporate, nonprofit, municipal",
     "total_amount": "number | optional | The total amount",
 
     "products": [{
@@ -25,7 +25,7 @@ Submit a new credit application to LeaseQ Platform.
         "name": "string | required | The product name",
         "description": "string | required | The product description",
         "quantity": "number | optional | The product quantity",
-        "price": "number | required | The product price",
+        "price": "number | required | The product price"
     }],
 
     "billing": [{
@@ -53,7 +53,7 @@ Submit a new credit application to LeaseQ Platform.
         "city": "string | required | The guarantor's city",
         "state": "string | required | The guarantor's state/prov",
         "zip": "string | required | The guarantor's zip/postal",
-        "percentage_owned": "string | required | The percentage owned",
+        "percentage_owned": "string | required | The percentage owned"
     }]
 }
 ```
@@ -122,7 +122,7 @@ Submit a new credit application to LeaseQ Platform.
 ```json
 {
     "app_id": "guid | The id of the new application",
-    "status": "string | required | The status of the new application - Funded, Lost, PO Issued, Prefunding Released, Contract In, Contract Out, Approved, App Submitted, Decline, App Widget Lead, New", 
+    "status": "string | The status of the new application - Funded, Lost, PO Issued, Prefunding Released, Contract In, Contract Out, Approved, App Submitted, Decline, App Widget Lead, New"
 }
 ```
 
@@ -131,7 +131,7 @@ Submit a new credit application to LeaseQ Platform.
 ```json
 {
     "app_id": "00000000-0000-0000-0000-000000000000",
-    "status": "LEAD",
+    "status": "LEAD"
 }
 ```
 
