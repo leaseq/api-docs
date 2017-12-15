@@ -25,8 +25,10 @@ _Note: These are estimated rates. Actual rates will vary based on actual credit 
 {
     "credit_tiers" : [{ 
         "credit_tier": "string | The borrower's credit tier (i.e. A,B,C,D)",
+
         "terms" : [{ 
             "term_length": "number | The term length in months",
+            
             "rates" : [{ 
                 "amount_min": "number | The minimum finance amount",
                 "amount_max": "number | The maximum finance amount",
@@ -43,8 +45,10 @@ _Note: These are estimated rates. Actual rates will vary based on actual credit 
 {
     "credit_tiers" : [{ 
         "credit_tier": "A",
+
         "terms" : [{ 
             "term_length": 12,
+
             "rates" : [{ 
                 "amount_min": 1,
                 "amount_max": 4999,
@@ -64,6 +68,7 @@ _Note: These are estimated rates. Actual rates will vary based on actual credit 
             }]
         },{ 
             "term_length": 24,
+
             "rates" : [{ 
                 "amount_min": 1,
                 "amount_max": 4999,
@@ -84,8 +89,10 @@ _Note: These are estimated rates. Actual rates will vary based on actual credit 
         }]
     },{
         "credit_tier": "B",
+
         "terms" : [{ 
             "term_length": 12,
+
             "rates" : [{ 
                 "amount_min": 1,
                 "amount_max": 4999,
@@ -105,6 +112,7 @@ _Note: These are estimated rates. Actual rates will vary based on actual credit 
             }]
         },{ 
             "term_length": 24,
+
             "rates" : [{ 
                 "amount_min": 1,
                 "amount_max": 4999,
