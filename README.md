@@ -14,3 +14,4 @@ ht&#8203;tp://dashq-demo.leaseq.com/api
 
 * [Authentication](login/README.md)
 * [Applications](applications/README.md)
+* [Lenders](lenders/README.md)
