@@ -13,7 +13,7 @@ _Note: These are estimated rates. Actual rates will vary based on actual credit 
 | Name | Value |
 |:-----|:------|
 |Accept|application/json|
-|Authorization|LeaseQ Auth Token|
+|Authorization|[LeaseQ Auth Token](../../README.md#authorization-header)|
 
 ## Success Response
 

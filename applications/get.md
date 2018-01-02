@@ -11,7 +11,7 @@ Get information (status) of current application that’s been submitted to the L
 | Name | Value |
 |:-----|:------|
 |Accept|application/json|
-|Authorization|LeaseQ Auth Token|
+|Authorization|[LeaseQ Auth Token](../README.md#authorization-header)|
 
 ## Success Response
 
