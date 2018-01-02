@@ -11,7 +11,7 @@ Gets pre-qualified financing quotes from LeaseQ's marketplace of Lenders.
 | Name | Value |
 |:-----|:------|
 |Accept|application/json|
-|Authorization|LeaseQ Auth Token|
+|Authorization|[LeaseQ Auth Token](../../README.md#authorization-header)|
 
 ## Success Response
 

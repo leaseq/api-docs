@@ -11,7 +11,7 @@ Uploads a new Document and associates it with an existing Application.
 | Name | Value |
 |:-----|:------|
 |Accept|application/json|
-|Authorization|LeaseQ Auth Token|
+|Authorization|[LeaseQ Auth Token](../../README.md#authorization-header)|
 
 **Request Body**
 
