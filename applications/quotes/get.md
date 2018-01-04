@@ -28,8 +28,7 @@ Gets pre-qualified financing quotes from LeaseQ's marketplace of Lenders.
         "details": "string | Additional details",
 
         "options":[{
-            "option_id": "guid | The option id",
-            "term_length": "number | The term length in months",
+            "term": "number | The term length in months",
             "monthly_payment": "number | The monthly payment"
         }]
     }]
@@ -47,20 +46,16 @@ Gets pre-qualified financing quotes from LeaseQ's marketplace of Lenders.
         "details": "First and last payment are due upfront. Documentation fee $200. Rates do not include sales, rental or use taxes. Fair market value purchase available at end of lease.",
         
         "options":[{
-            "option_id": "00000000-0000-0000-0000-000000000000",
-            "term_length": 60,
+            "term": 60,
             "monthly_payment": 537.00,
         },{
-            "option_id": "00000000-0000-0000-0000-000000000000",
-            "term_length": 48,
+            "term": 48,
             "monthly_payment": 646.00,
         },{
-            "option_id": "00000000-0000-0000-0000-000000000000",
-            "term_length": 36,
+            "term": 36,
             "monthly_payment": 829.00,
         },{
-            "option_id": "00000000-0000-0000-0000-000000000000",
-            "term_length": 24,
+            "term": 24,
             "monthly_payment": 1185.00
         }]
     }]
