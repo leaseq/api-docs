@@ -1,7 +1,7 @@
 # SSN Encryption 
 
 ```diff
-- Support for SSN encryption is under development and subjec to change. 
+- Support for SSN encryption is under development and subject to change. 
 ```
 
 When applications post or update includes SSN, it needs to be encrypted. We use RSA, asymmetric public key algorithm with key size of 2048. Steps for encrypting the SSN : 
