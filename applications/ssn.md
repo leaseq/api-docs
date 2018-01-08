@@ -21,19 +21,7 @@ Production : https://dashq.leaseq.com/profile
 Demo :  http://dashq-demo.leaseq.com/profile 
 ```
 
-3. Remove all white spaces and special characters ( - )  from SSN.
-
-***Example***
-
-```ruby
-    ssn = "999-99 970"
-    ssn = ssn.gsub(/[^0-9]/, '')
-    puts ssn
-
-    result: "99999970"
-```
-
-4. Use downloaded RSA public file to encrypt the SSN. 
+3. Use downloaded RSA public file to encrypt the SSN. 
 
 ***Example***
 
@@ -45,7 +33,7 @@ Demo :  http://dashq-demo.leaseq.com/profile
   
 ```
 
-5. Encode the cipher text using base 64 module and replace new line characters 
+4. Encode the cipher text using base 64 module and replace new line characters 
 
 ***Example***
 
@@ -59,7 +47,7 @@ Demo :  http://dashq-demo.leaseq.com/profile
 
 ```
 
-6. This encoded/encrypted SSN string need to be passed with application data.
+5. This encoded/encrypted SSN string need to be passed with application data.
 
 
 ## Useful link
