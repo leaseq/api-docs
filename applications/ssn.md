@@ -6,15 +6,20 @@ When applications post or update includes SSN, it needs to be encrypted. We use 
 
 1. Generate encryption key pair in LeaseQ dashboard. 
 
-...Production : https://dashq.leaseq.com/profile
+```
+Production : https://dashq.leaseq.com/profile
 
-...Demo :  http://dashq-demo.leaseq.com/profile 
+Demo :  http://dashq-demo.leaseq.com/profile 
 
-2. Download public encryption file. 
+```
 
-...Production : https://dashq.leaseq.com/profile
+2. Download public encryption key file. 
 
-...Demo :  http://dashq-demo.leaseq.com/profile 
+```
+Production : https://dashq.leaseq.com/profile
+
+Demo :  http://dashq-demo.leaseq.com/profile 
+```
 
 3. Remove all white spaces and special characters ( - )  from SSN.
 
