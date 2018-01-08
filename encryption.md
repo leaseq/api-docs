@@ -6,7 +6,7 @@
 
 LeaseQ requires certain data/fields be encrypted to ensure sensitive data remains private. LeaseQ use RSA - asymmetric public key algorithm with key size of 2048.
 
-## Steps to perform encyrption. 
+## Steps to perform encryption. 
 
 1. Generate encryption key pair in LeaseQ dashboard. 
 
@@ -51,4 +51,3 @@ Demo :  http://dashq-demo.leaseq.com/profile
 ## Useful links
 
 1. [Ruby 2.0.0 Doc](https://ruby-doc.org/stdlib-2.0.0/libdoc/openssl/rdoc/OpenSSL/PKey/RSA.html)
-2. [jsencrypt](https://github.com/travist/jsencrypt)

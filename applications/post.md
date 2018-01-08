@@ -60,6 +60,8 @@ Submit a new credit application to LeaseQ Platform.
 }
 ```
 
+_See [Encryption of Sensitive Data](../encryption.md) for information on encrypting sensitive fields like SSN._
+
 ***Example***
 
 ```json
