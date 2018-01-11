@@ -29,8 +29,11 @@ _Note: Applications may transition between these statuses in a non-linear way. F
 * [Retrieve an Application](get.md) : `GET /applications/{application_id}`
 * [Update the status of an Application](patch.md) : `PATCH /applications/{application_id}`
 
-### Documents
-* [Manage Application Documents](documents/README.md) : `/applications/{application_id}/documents`
-
 ### Quotes
 * [Retrieve Lender Quotes](quotes/README.md) : `/applications/{application_id}/quotes`
+
+### Signing 
+* [Sign the application](sign.md) : `POST /applications/{application_id}/sign`
+
+### Documents
+* [Manage Application Documents](documents/README.md) : `/applications/{application_id}/documents`
