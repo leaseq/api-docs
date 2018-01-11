@@ -8,34 +8,23 @@ LeaseQ requires certain data/fields be encrypted to ensure sensitive data remain
 
 ## Steps to perform encryption. 
 
-1. Generate encryption key pair in LeaseQ dashboard. 
+1. [Get the public key](public-key/get.md).
 
-```
-Production : https://dashq.leaseq.com/profile
-Demo :  http://dashq-demo.leaseq.com/profile 
-
-```
-
-2. Download public encryption key file. 
-
-```
-Production : https://dashq.leaseq.com/profile
-Demo :  http://dashq-demo.leaseq.com/profile 
-```
-
-3. Use downloaded RSA public file to encrypt the sensitive data/fields. 
+2. Use the public key to encrypt sensitive data/fields. 
 
 ***Example***
 
 ```ruby
   
-   public_key = OpenSSL::PKey::RSA.new(File.read(public_key_file_path))
+  decoded_text = Base64.decode64(string_from_public_key_endpoint)
 
-   cipher_text = public_key.public_encrypt( sensitive_data )
+  public_key = OpenSSL::PKey::RSA.new(decoded_text)
+
+  cipher_text = public_key.public_encrypt( sensitive_data )
   
 ```
 
-4. Encode the cipher text using base 64 module and replace new line characters 
+3. Encode the cipher text using base 64 module and replace new line characters 
 
 ***Example***
 

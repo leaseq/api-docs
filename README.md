@@ -20,5 +20,6 @@ Authorization: LeaseQ $Auth_Token
 ## APIs
 
 * [Login](login/post.md)
+* [Public key](public-key/post.md)
 * [Applications](applications/README.md)
 * [Lenders](lenders/README.md)
