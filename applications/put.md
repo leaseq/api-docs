@@ -41,7 +41,8 @@ Update an existing application in the LeaseQ Platform.
         "address": "string | required | The company headquarters street address",
         "city": "string | required | The city where the company headquarters is located ",
         "state": "string | required | The state/prov where the company headquarters is located",
-        "zip": "string | required | The zip/postal of the company headquarters"
+        "zip": "string | required | The zip/postal of the company headquarters",
+        "ein": "string | optional | The Employer Identification Number"
     },
 
     "guarantors": [{
@@ -53,10 +54,13 @@ Update an existing application in the LeaseQ Platform.
         "city": "string | required | The guarantor's city",
         "state": "string | required | The guarantor's state/prov",
         "zip": "string | required | The guarantor's zip/postal",
+        "ssn": "encrypted string | optional | The guarantor's Social Security Number",
         "percentage_owned": "string | required | The percentage owned"
     }]
 }
 ```
+
+_See [Encryption of Sensitive Data](../encryption.md) for information on encrypting sensitive fields like SSN._
 
 ***Example***
 
@@ -96,7 +100,8 @@ Update an existing application in the LeaseQ Platform.
         "address": "17 North Ave",
         "city": "Boston",
         "state": "MA",
-        "zip": "01802"
+        "zip": "01802",
+        "ein": "00-0000000"
     },
 
     "guarantors": [{
@@ -108,6 +113,7 @@ Update an existing application in the LeaseQ Platform.
         "city": "Boston",
         "state": "MA",
         "zip": "01801",
+        "ssn": "<encrypted SSN>",
         "percentage_owned": "100"
     }]
 }
