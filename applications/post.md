@@ -113,7 +113,7 @@ _See [Encryption of Sensitive Data](../encryption.md) for information on encrypt
         "city": "Boston",
         "state": "MA",
         "zip": "01801",
-        "ssn": "<encrypted SSN>",
+        "ssn": "nYJFM7aP5awEYIETAuUfdqBMxV3V8FawJBrDVl5ZmV9ZoXhTPjfymiM9JTMZBT9alxzLIvQqm9Et/2eUw+0lTxbEIGPrDzaLucB5nWG0Q87xMKXyvtw/bBf+4MXYDKhKURPWiLsSRUKWEs5NTspAQFK0sWvKJl1ANtUJXjpOcID9rSTGTOHN40/9PABgqWoMmu293HFb8d2Zrz2x0XBZk9bHkpFcVi1lJTBjLXYIgC73fLAvWKii0RuZrMRct/o8KcmaZiYHR0rCKStecdvvoC+CpKP34n9ESVc2n1bCNKmAkxKYsNr3xVysNh8XBCSbvtV9TYVPVlvy7oZOmhyUZg==",
         "percentage_owned": "100"
     }]
 }
