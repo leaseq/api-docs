@@ -6,36 +6,64 @@
 
 LeaseQ requires certain data/fields be encrypted to ensure sensitive data remains private. LeaseQ use RSA - asymmetric public key algorithm with key size of 2048.
 
-## Steps to perform encryption. 
+## Steps to perform encryption
 
-1. [Get the public key](public-key/get.md).
+#### 1. Download the key
+  * Demo: http://dashq-demo.leaseq.com/profile 
+  * Production: https://dashq.leaseq.com/profile
 
-2. Use the public key to encrypt sensitive data/fields. 
-
-***Example***
-
+#### 2. Load the key file
 ```ruby
-  
-  decoded_text = Base64.decode64(string_from_public_key_endpoint)
-
-  public_key = OpenSSL::PKey::RSA.new(decoded_text)
-
-  cipher_text = public_key.public_encrypt( sensitive_data )
-  
+public_key = OpenSSL::PKey::RSA.new(File.read(public_key_file_path))
 ```
 
-3. Encode the cipher text using base 64 module and replace new line characters 
-
-***Example***
+#### 2. Encrypt
 
 ```ruby
+cipher_text = public_key.public_encrypt( sensitive_data )
+```
+
+#### 3. Encode
+
+```ruby
+encoded_text = Base64.encode64(cipher_text).gsub(/\n/, '')
+```
+
+JSON cannot handle the raw output of `public_encrypt`, so base64-encode it and remove any line breaks.
+
+## Example
+
+```ruby
+require 'openssl'
+require 'base64'
+require 'net/http'
+require 'json'
+
+
+def encrypt(sensitive_data, public_key_file_path)
+
+  public_key = OpenSSL::PKey::RSA.new(File.read(public_key_file_path))
+
+  cipher_text = public_key.public_encrypt(sensitive_data)
 
   encoded_text = Base64.encode64(cipher_text).gsub(/\n/, '')
 
-  puts encoded_text
+  return encoded_text
 
-  OAKIR4u/lTQwb/y//O+STQZLkLHsD+lTV4Q/KKfCZJ2Qr3Isw66zssQpowZNobcI93091o6gYpLaYOH8S9BCqnikBxQV342f/k14nrLSZqoYm6mwYaIZMvGVhyK5RIFhYvpOM6PFq12Qh9fCD2rPgf7eI8KNx74gY1dmD2CIdGKPkqA1IdEWIIGX29725apPZasvbbBeUpVVwpIq9De23uuJ/9dGb9hZtkwD4aps0Uv3ttZEv6+M4xYCnJ3U9ZWCBWE5wKng2OssBcb6u48P1cJz0t2rCxX6YrQ41UDj1225d1TCN/Nq4FcUPtL8IaQbWl7kq+08xeD3m77FUU1Dug==
+end
 
+
+ssn = encrypt("000-00-0000", "public_key.pem")
+
+
+URI('https://localhost:8080/api/endpoint')
+req = Net::HTTP::Post.new(uri.path, initheader = {'Content-Type' =>'application/json'})
+req.body = { :ssn => encoded_text }.to_json
+response = https.request(req)
+
+
+puts ssn
+puts response
 ```
 ## Useful links
 
