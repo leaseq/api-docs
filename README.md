@@ -22,3 +22,10 @@ Authorization: LeaseQ $Auth_Token
 * [Login](login/post.md)
 * [Applications](applications/README.md)
 * [Lenders](lenders/README.md)
+
+### API Limits
+The following limits are imposed on clients accessing these APIs.
+
+| Limit | Value |
+|:-----|:------|
+|Request body size| 25 MB|
