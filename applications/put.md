@@ -19,6 +19,7 @@ Update an existing application in the LeaseQ Platform.
 {
     "type": "string | required | The application type - business, consumer, corporate, nonprofit, municipal",
     "total_amount": "number | optional | The total amount",
+    "remote_id": "guid | optional | Unique remote app id",
 
     "products": [{
         "product_code": "string | required | The product code",
@@ -68,6 +69,7 @@ _See [Encryption of Sensitive Data](../encryption.md) for information on encrypt
 {
     "type": "business",
     "total_amount":20000,
+    "remote_id":"eb9838f3-8d3f-fe24-eff0-d180d3fd513a",
 
     "products": [{
         "product_code": "SBIR_Pr_Code",
