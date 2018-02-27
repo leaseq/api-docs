@@ -19,7 +19,7 @@ Submit a new credit application to LeaseQ Platform.
 {
     "type": "string | required | The application type - business, consumer, corporate, nonprofit, municipal",
     "total_amount": "number | optional | The total amount",
-    "remote_id": "guid | optional | Unique remote app id",
+    "remote_id": "string | optional | Unique remote app id",
 
     "products": [{
         "product_code": "string | required | The product code",
