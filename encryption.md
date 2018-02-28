@@ -4,7 +4,7 @@
 - Support for encryption is under development and may be subject to change.
 ```
 
-LeaseQ requires certain data/fields be encrypted to ensure sensitive data remains private. LeaseQ use RSA - asymmetric public key algorithm with key size of 2048.
+LeaseQ requires certain data/fields be encrypted to ensure sensitive data remains private. LeaseQ use RSA - asymmetric public key algorithm with key size of 4096.
 
 ## Steps to perform encryption
 
