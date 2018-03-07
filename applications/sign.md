@@ -23,7 +23,7 @@ The quotes for an application can be retrieved from the [quotes API](quotes/get.
     "selected_term": "number | required | The desired term length from the selected quote",
     
     "name": "string | required | The name of the signer",
-    "title": "string | required | The title of the signer",
+    "title": "string | required | The title of the signer (e.g. Owner, Principal, CFO, ...)",
     "consent": "string | required | What the signer is consenting to. For example, 'Agreement to perform hard credit pull'"
 }
 ```
@@ -35,6 +35,7 @@ The quotes for an application can be retrieved from the [quotes API](quotes/get.
     "selected_quote": "00000000-0000-0000-0000-000000000000",
     "selected_term": 48,
     "name": "John Smith",
+    "title": "Owner",
     "consent": "Agreement to perform hard credit pull"
 }
 ```
