@@ -46,6 +46,8 @@ Update the credit application so the total amount to be financed  is $100,000.
 }
 ```
 
+_Note: Changing the `total_amount` may result in a change of lender and an additional credit pull. Generally, this only happens when the change is an increase greater than 10% of the original total amount quoted._
+
 ## Success Response
 
 **Code** : `204 NO CONTENT`
