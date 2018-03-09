@@ -27,7 +27,7 @@ _Note: Applications may transition between these statuses in a non-linear way. F
 * [Create an Application](post.md) : `POST /applications`
 * [Update an existing Application](put.md) : `PUT /applications/{application_id}`
 * [Retrieve an Application](get.md) : `GET /applications/{application_id}`
-* [Update the status of an Application](patch.md) : `PATCH /applications/{application_id}`
+* [Update a portion of an Application](patch.md) : `PATCH /applications/{application_id}`
 
 ### Quotes
 * [Retrieve Lender Quotes](quotes/README.md) : `/applications/{application_id}/quotes`
