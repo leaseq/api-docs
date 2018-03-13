@@ -17,7 +17,7 @@ Applications transition though different statuses as they are processed. The fol
 |DocsOut|Lender has issued documents for the Borrower to sign.|
 |DocsIn|Borrower has signed and submitted Lender documents.|
 |PrefundingReleased|Prefunding has been released to Dealer.|
-|POIssued|Dealer has issued purchase order to Lender.|
+|POIssued|Lender has issued purchase order to Dealer.|
 |Lost|One of the parties involved has decided not to move forward.|
 |Funded|All documents have been signed and deal is fully funded.|
 
