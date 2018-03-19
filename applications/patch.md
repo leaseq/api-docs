@@ -18,7 +18,7 @@ Update a portion of an application that’s been submitted to the LeaseQ Platfor
 
 ```json
 {
-    "status": "string | optional | The application status - Funded, Lost, PO Issued, Prefunding Released, Contract In, Contract Out, Approved, App Submitted, Decline, App In, Leads",
+    "status": "string | optional | The application status - e.g. New, Lead, AppIn, AppSubmitted, Decline, Approved, etc.",
     "lost_reason": "string | optional | The reason if status is Lost",
 
     "total_amount": "number | optional | The total amount",

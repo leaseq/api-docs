@@ -71,3 +71,7 @@ The quotes for an application can be retrieved from the [quotes API](quotes/get.
 ### If not authorized.
 
 **Code** : `401 UNAUTHORIZED`
+
+### If application is not found.
+
+**Code** : `404 NOT FOUND`
