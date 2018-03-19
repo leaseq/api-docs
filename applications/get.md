@@ -25,8 +25,8 @@ Get information (status) of current application that’s been submitted to the L
     "remote_id": "string | An optional identifier that can be set to correlate LeaseQ applications with entities in other systems. This field is searchable in the LeaseQ dashboard",
     "status": "string | The application status - e.g. New, Lead, AppIn, AppSubmitted, Decline, Approved, etc.", 
     "lender" : "string | The lender name",
-    "total_amount" : "TODO",
-    "updated_date" : "TODO",
+    "total_amount" : "number | The total amount",
+    "updated_date" : "string | The date/time when the application was last updated.",
 }
 ```
 
