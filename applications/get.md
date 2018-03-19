@@ -22,19 +22,11 @@ Get information (status) of current application that’s been submitted to the L
 ```json
 {
     "app_id": "guid | The id of the new application",
-    "status": "string | required | The application status - Funded, Lost, PO Issued, Prefunding Released, Contract In, Contract Out, Approved, App Submitted, Decline, App Widget Lead, New", 
-    "term" : "string | The term length",
-    "lender" : { 
-        "name" : "string | The lender name" 
-    },
-    "signed_date" : "1/1/2001",
-    "approved_date" : "1/1/2001",
-    "funded_date" : "1/1/2001",
-    "products " : [{ 
-        "product_code": "string | required | The product code",
-        "quantity": "number | optional | The product quantity",
-        "discounted_price": "number | optional | The discounted price"
-    }], 
+    "remote_id": "string | An optional identifier that can be set to correlate LeaseQ applications with entities in other systems. This field is searchable in the LeaseQ dashboard",
+    "status": "string | The application status - e.g. New, Lead, AppIn, AppSubmitted, Decline, Approved, etc.", 
+    "lender" : "string | The lender name",
+    "total_amount" : "number | The total amount",
+    "updated_date" : "string | The date/time when the application was last updated.",
 }
 ```
 
@@ -43,23 +35,11 @@ Get information (status) of current application that’s been submitted to the L
 ```json
 {
     "app_id": "GUID",
-    "status": "APPROVED",
-    "term": "60",
-    "lender": {
-        "name": "ACME Lending"
-    },
-    "signed_date": "",
-    "approved_date": "",
-    "funded_date": "",
-    "products ": [{
-        "product_id ": "SBIR_Pr_Code ",
-        "quantity": 3,
-        "discounted_price ": 4000
-    }, {
-        "product_id": "SBIR_Pr_Code",
-        "quantity ": 2,
-        "discounted_price ": 3000
-    }],
+    "remote_id": "eb9838f3-8d3f-fe24-eff0-d180d3fd513a",
+    "status": "Approved",
+    "lender": "ACME Lending",
+    "total_amount" : 20000.0,
+    "updated_date": "2018-03-19T15:43:53.828Z"
 }
 ```
 

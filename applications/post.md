@@ -18,7 +18,7 @@ Submit a new credit application to LeaseQ Platform.
 ```json
 {
     "type": "string | required | The application type - business, consumer, corporate, nonprofit, municipal",
-    "total_amount": "number | optional | The total amount",
+    "total_amount": "number | required | The total amount",
     "remote_id": "string | optional | An optional identifier that can be set to correlate LeaseQ applications with entities in other systems. This field is searchable in the LeaseQ dashboard",
 
     "products": [{
@@ -43,7 +43,8 @@ Submit a new credit application to LeaseQ Platform.
         "city": "string | required | The city where the company headquarters is located ",
         "state": "string | required | The state/prov where the company headquarters is located",
         "zip": "string | required | The zip/postal of the company headquarters",
-        "ein": "string | optional | The Employer Identification Number"
+        "ein": "string | optional | The Employer Identification Number",
+        "years_in_business" : "number | required | The number of years in business"
     },
 
     "guarantors": [{
@@ -55,7 +56,7 @@ Submit a new credit application to LeaseQ Platform.
         "city": "string | required | The guarantor's city",
         "state": "string | required | The guarantor's state/prov",
         "zip": "string | required | The guarantor's zip/postal",
-        "ssn": "encrypted string | optional | The guarantor's Social Security Number",
+        "ssn": "encrypted string | required | The guarantor's Social Security Number",
         "percentage_owned": "string | required | The percentage owned"
     }]
 }
@@ -103,7 +104,8 @@ _See [Encryption of Sensitive Data](../encryption.md) for information on encrypt
         "city": "Boston",
         "state": "MA",
         "zip": "01802",
-        "ein": "00-0000000"
+        "ein": "00-0000000",
+        "years_in_business": 5
     },
 
     "guarantors": [{
@@ -115,7 +117,7 @@ _See [Encryption of Sensitive Data](../encryption.md) for information on encrypt
         "city": "Boston",
         "state": "MA",
         "zip": "01801",
-        "ssn": "nYJFM7aP5awEYIETAuUfdqBMxV3V8FawJBrDVl5ZmV9ZoXhTPjfymiM9JTMZBT9alxzLIvQqm9Et/2eUw+0lTxbEIGPrDzaLucB5nWG0Q87xMKXyvtw/bBf+4MXYDKhKURPWiLsSRUKWEs5NTspAQFK0sWvKJl1ANtUJXjpOcID9rSTGTOHN40/9PABgqWoMmu293HFb8d2Zrz2x0XBZk9bHkpFcVi1lJTBjLXYIgC73fLAvWKii0RuZrMRct/o8KcmaZiYHR0rCKStecdvvoC+CpKP34n9ESVc2n1bCNKmAkxKYsNr3xVysNh8XBCSbvtV9TYVPVlvy7oZOmhyUZg==",
+        "ssn": "hd17v6cWi2ltvwcLi6IDj4rhpkV+fafQOWg8yY756FwB46+POrecRj1dUg+xUcxW7lHtp0WKppB810+Ut++9uWNr6YJvzzemThrKykVw71qfq5ParS2p1YRCwGgfqJNb92V5KasrysMp+gM2kq6QdiSUWN9WhUP/6dkOnR+1CTCe68sS7zLI0JG394X196YN/ERasM5QhNSihQoOlsjw166wZMegviEb2EEm2zKp8A7jchL0ahJFsVO4aXmREIbCuE4jXY6OazWv7aF1BB5jvE7Hdw9SgXPMb/9+HTDOnLkIPqxEuxjZPR6bv6hImFBdeLa7J4xsPMJtghhla3GdndT7Okgn1/Qoq5Wjg1RzvFVp2rsYIMx9YVP74N69ga8f8e1PNd6T4V6coQRAP4U9IGb23BDAINxVbL5mae/LGDSsA6tdaT2pwGmJ90gyioutUSCNPR202zAKYY9280BKphp+GhERsSRKP+yBWCgc5EEJOKSqO/BcNbO3ckmfaNPOSHBnenjfaPogY0KM7jwVZIY5w+6itcOUrMpFLycxZLlqUWo6MOvn/CTsKWkm75uXv0dk/BPDgV1pj4ErMe1ifZyAN0SGF3n/9gSvqqI9IRRhELs5AMM/2AT+O8EDmRxvgO1XIwOu/gzeJ9pyQ1pkF06dlCpmlvTD6s6QZVNTa6s=",
         "percentage_owned": "100"
     }]
 }
@@ -139,7 +141,7 @@ _See [Encryption of Sensitive Data](../encryption.md) for information on encrypt
 ```json
 {
     "app_id": "00000000-0000-0000-0000-000000000000",
-    "status": "LEAD"
+    "status": "New"
 }
 ```
 
