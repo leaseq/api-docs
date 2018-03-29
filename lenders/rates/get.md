@@ -92,15 +92,15 @@ _Note: These are estimated rates. Actual rates will vary based on actual credit 
                     "rates": [
                         {
                             "amount_min": 1,
-                            "amount_max": 4999,
+                            "amount_max": 4999.99,
                             "rate": 0.21437,
-                            "factor": 0.00893
+                            "factor": 0.0273
                         },
                         {
                             "amount_min": 5000,
-                            "amount_max": 9999,
+                            "amount_max": 9999.99,
                             "rate": 0.21437,
-                            "factor": 0.00893
+                            "factor": 0.0273
                         }
                     ]
                 },
@@ -109,15 +109,15 @@ _Note: These are estimated rates. Actual rates will vary based on actual credit 
                     "rates": [
                         {
                             "amount_min": 1,
-                            "amount_max": 4999,
+                            "amount_max": 4999.99,
                             "rate": 0.2125,
-                            "factor": 0.00885
+                            "factor": 0.0311
                         },
                         {
                             "amount_min": 5000,
-                            "amount_max": 9999,
+                            "amount_max": 9999.99,
                             "rate": 0.2125,
-                            "factor": 0.00885
+                            "factor": 0.0311
                         }
                     ]
                 }
