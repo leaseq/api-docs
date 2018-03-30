@@ -58,7 +58,9 @@ Submit a new credit application to LeaseQ Platform.
         "zip": "string | required | The guarantor's zip/postal",
         "ssn": "encrypted string | required | The guarantor's Social Security Number",
         "percentage_owned": "string | required | The percentage owned"
-    }]
+    }],
+
+    "owns_install_location": "boolean | optional | Indicates whether the customer owns the property where the equipment is being installed" 
 }
 ```
 
