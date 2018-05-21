@@ -44,7 +44,8 @@ Submit a new credit application to LeaseQ Platform.
         "state": "string | required | The state/prov where the company headquarters is located",
         "zip": "string | required | The zip/postal of the company headquarters",
         "ein": "string | optional | The Employer Identification Number",
-        "years_in_business" : "number | required | The number of years in business"
+        "years_in_business" : "number | required | The number of years in business",
+        "bus_type" : "string | required | Business structure of company - c_corp, s_corp, llc, partnership, sole_prop"        
     },
 
     "guarantors": [{
@@ -60,7 +61,8 @@ Submit a new credit application to LeaseQ Platform.
         "percentage_owned": "string | required | The percentage owned"
     }],
 
-    "owns_install_location": "boolean | optional | Indicates whether the customer owns the property where the equipment is being installed" 
+    "owns_install_location": "boolean | optional | Indicates whether the customer owns the property where the equipment is being installed",
+    "is_partial_application": "boolean | optional | Indicates whether values for all required fields are included in the request" 
 }
 ```
 
@@ -107,7 +109,8 @@ _See [Encryption of Sensitive Data](../encryption.md) for information on encrypt
         "state": "MA",
         "zip": "01802",
         "ein": "00-0000000",
-        "years_in_business": 5
+        "years_in_business": 5,
+        "bus_type": "c_corp"
     },
 
     "guarantors": [{
