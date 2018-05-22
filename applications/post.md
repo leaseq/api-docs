@@ -20,6 +20,7 @@ Submit a new credit application to LeaseQ Platform.
     "type": "string | required | The application type - business, consumer, corporate, nonprofit, municipal",
     "total_amount": "number | required | The total amount",
     "remote_id": "string | optional | An optional identifier that can be set to correlate LeaseQ applications with entities in other systems. This field is searchable in the LeaseQ dashboard",
+    "equipment_type": "string | optional | The category of the application's equipment (see below)",
 
     "products": [{
         "product_code": "string | required | The product code",
@@ -155,3 +156,41 @@ _See [Encryption of Sensitive Data](../encryption.md) for information on encrypt
 ### If not authorized.
 
 **Code** : `401 UNAUTHORIZED`
+
+
+## List Of Equipment Types
+
+Audio Visual Equipment
+Automotive Equipment
+Building Automation Systems (Controls)
+Coffee & Espresso Machines
+Computer & IT Equipment
+Construction Equipment
+Copy Machines
+Dental Equipment
+Dry Cleaning Equipment
+Fabrication & Finishing Equipment
+Fitness Equipment
+Fitness (Crossfit)
+Fork Lift & Material Handling
+Gaming Equipment
+Grow Lighting for Cannabis
+HVAC
+Ice Machine & Refrigeration
+Janitorial Equipment
+LED Lighting and Signage
+Laundry Machines
+Machine Tool Equipment
+Mailroom Equipment
+Medical Equipment
+Modular Buildings
+Office Equipment
+Point of Sale Equipment
+Printing Equipment
+Restaurant Equipment
+Solar
+Tractor & Farm Equipment
+Trucks & Vehicles
+Vending Machines
+Veterinary Equipment
+Other
