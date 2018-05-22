@@ -158,39 +158,39 @@ _See [Encryption of Sensitive Data](../encryption.md) for information on encrypt
 **Code** : `401 UNAUTHORIZED`
 
 
-## List Of Equipment Types
+## List Of Valid Equipment Types
 
-Audio Visual Equipment
-Automotive Equipment
-Building Automation Systems (Controls)
-Coffee & Espresso Machines
-Computer & IT Equipment
-Construction Equipment
-Copy Machines
-Dental Equipment
-Dry Cleaning Equipment
-Fabrication & Finishing Equipment
-Fitness Equipment
-Fitness (Crossfit)
-Fork Lift & Material Handling
-Gaming Equipment
-Grow Lighting for Cannabis
-HVAC
-Ice Machine & Refrigeration
-Janitorial Equipment
-LED Lighting and Signage
-Laundry Machines
-Machine Tool Equipment
-Mailroom Equipment
-Medical Equipment
-Modular Buildings
-Office Equipment
-Point of Sale Equipment
-Printing Equipment
-Restaurant Equipment
-Solar
-Tractor & Farm Equipment
-Trucks & Vehicles
-Vending Machines
-Veterinary Equipment
-Other
+* "Audio Visual Equipment"
+* "Automotive Equipment"
+* "Building Automation Systems (Controls)"
+* "Coffee & Espresso Machines"
+* "Computer & IT Equipment"
+* "Construction Equipment"
+* "Copy Machines"
+* "Dental Equipment"
+* "Dry Cleaning Equipment"
+* "Fabrication & Finishing Equipment"
+* "Fitness Equipment"
+* "Fitness (Crossfit)"
+* "Fork Lift & Material Handling"
+* "Gaming Equipment"
+* "Grow Lighting for Cannabis"
+* "HVAC"
+* "Ice Machine & Refrigeration"
+* "Janitorial Equipment"
+* "LED Lighting and Signage"
+* "Laundry Machines"
+* "Machine Tool Equipment"
+* "Mailroom Equipment"
+* "Medical Equipment"
+* "Modular Buildings"
+* "Office Equipment"
+* "Point of Sale Equipment"
+* "Printing Equipment"
+* "Restaurant Equipment"
+* "Solar"
+* "Tractor & Farm Equipment"
+* "Trucks & Vehicles"
+* "Vending Machines"
+* "Veterinary Equipment"
+* "Other"
