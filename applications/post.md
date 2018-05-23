@@ -20,6 +20,7 @@ Submit a new credit application to LeaseQ Platform.
     "type": "string | required | The application type - business, consumer, corporate, nonprofit, municipal",
     "total_amount": "number | required | The total amount",
     "remote_id": "string | optional | An optional identifier that can be set to correlate LeaseQ applications with entities in other systems. This field is searchable in the LeaseQ dashboard",
+    "equipment_type": "string | optional | The category of the application's equipment (see below)",
 
     "products": [{
         "product_code": "string | required | The product code",
@@ -44,7 +45,8 @@ Submit a new credit application to LeaseQ Platform.
         "state": "string | required | The state/prov where the company headquarters is located",
         "zip": "string | required | The zip/postal of the company headquarters",
         "ein": "string | optional | The Employer Identification Number",
-        "years_in_business" : "number | required | The number of years in business"
+        "years_in_business" : "number | required | The number of years in business",
+        "bus_type" : "string | required | Business structure of company - c_corp, s_corp, llc, partnership, sole_prop"        
     },
 
     "guarantors": [{
@@ -60,7 +62,8 @@ Submit a new credit application to LeaseQ Platform.
         "percentage_owned": "string | required | The percentage owned"
     }],
 
-    "owns_install_location": "boolean | optional | Indicates whether the customer owns the property where the equipment is being installed" 
+    "owns_install_location": "boolean | optional | Indicates whether the customer owns the property where the equipment is being installed",
+    "is_partial_application": "boolean | optional | Indicates whether values for all required fields are included in the request" 
 }
 ```
 
@@ -107,7 +110,8 @@ _See [Encryption of Sensitive Data](../encryption.md) for information on encrypt
         "state": "MA",
         "zip": "01802",
         "ein": "00-0000000",
-        "years_in_business": 5
+        "years_in_business": 5,
+        "bus_type": "c_corp"
     },
 
     "guarantors": [{
@@ -152,3 +156,41 @@ _See [Encryption of Sensitive Data](../encryption.md) for information on encrypt
 ### If not authorized.
 
 **Code** : `401 UNAUTHORIZED`
+
+
+## List Of Valid Equipment Types
+
+* "Audio Visual Equipment"
+* "Automotive Equipment"
+* "Building Automation Systems (Controls)"
+* "Coffee & Espresso Machines"
+* "Computer & IT Equipment"
+* "Construction Equipment"
+* "Copy Machines"
+* "Dental Equipment"
+* "Dry Cleaning Equipment"
+* "Fabrication & Finishing Equipment"
+* "Fitness Equipment"
+* "Fitness (Crossfit)"
+* "Fork Lift & Material Handling"
+* "Gaming Equipment"
+* "Grow Lighting for Cannabis"
+* "HVAC"
+* "Ice Machine & Refrigeration"
+* "Janitorial Equipment"
+* "LED Lighting and Signage"
+* "Laundry Machines"
+* "Machine Tool Equipment"
+* "Mailroom Equipment"
+* "Medical Equipment"
+* "Modular Buildings"
+* "Office Equipment"
+* "Point of Sale Equipment"
+* "Printing Equipment"
+* "Restaurant Equipment"
+* "Solar"
+* "Tractor & Farm Equipment"
+* "Trucks & Vehicles"
+* "Vending Machines"
+* "Veterinary Equipment"
+* "Other"
