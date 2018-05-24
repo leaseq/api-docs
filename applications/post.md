@@ -17,104 +17,192 @@ Submit a new credit application to LeaseQ Platform.
 
 ```json
 {
-    "type": "string | required | The application type - business, consumer, corporate, nonprofit, municipal",
-    "total_amount": "number | required | The total amount",
-    "remote_id": "string | optional | An optional identifier that can be set to correlate LeaseQ applications with entities in other systems. This field is searchable in the LeaseQ dashboard",
+    "type": "string | The application type - business, consumer, corporate, nonprofit, municipal",
+    "is_full_application" : "boolean | A flag which indicates this application should be validated as a complete application that requires no additional information from guarantors",
+    "total_amount": "number | The total amount to be financed",
+    "remote_id": "string | An identifier that can be set to correlate LeaseQ applications with entities in other systems. This field is searchable in the LeaseQ dashboard",
 
     "products": [{
-        "product_code": "string | required | The product code",
-        "name": "string | required | The product name",
-        "description": "string | required | The product description",
-        "quantity": "number | optional | The product quantity",
-        "price": "number | required | The product price"
+        "type": "string | The product type - See 'Product Types' link",
+        "condition": "string | The condition of the equipment - 'new' | 'used'",
+        "product_code": "string | The product code",
+        "name": "string | The product name",
+        "description": "string | The product description",
+        "quantity": "number | The product quantity",
+        "price": "number | The product price"
     }],
 
     "billing": [{
-        "charge": "string | required | The charge / line item",
-        "description": "string | optional | The description of the charge",
-        "price": "number | required | The price"
+        "charge": "string | The charge / line item",
+        "description": "string | The description of the charge",
+        "price": "number | The price"
     }],
 
     "company": {
-        "name": "string | required | The name of the company",
-        "dba": "string | optional | The name under which the company does business",
-        "phone": "string | required | The phone number for the company headquarters",
-        "address": "string | required | The company headquarters street address",
-        "city": "string | required | The city where the company headquarters is located ",
-        "state": "string | required | The state/prov where the company headquarters is located",
-        "zip": "string | required | The zip/postal of the company headquarters",
-        "ein": "string | optional | The Employer Identification Number",
-        "years_in_business" : "number | required | The number of years in business"
+        "name": "string | The name of the company",
+        "dba": "string | The name under which the company does business",
+        "phone": "string | The phone number for the company headquarters",
+        "address": "string | The company headquarters street address",
+        "city": "string | The city where the company headquarters is located ",
+        "state": "string | The state/prov where the company headquarters is located",
+        "zip": "string | The zip/postal of the company headquarters",
+        "ein": "string | The Employer Identification Number",
+        "years_in_business" : "number | The number of years in business",
+        "structure": "string | The company ownership structure - See 'Company Structures' link"
     },
 
     "guarantors": [{
-        "first_name": "string | required | The guarantor's first name",
-        "last_name": "string | required | The guarantor's last name",
-        "email": "string | required | The guarantor's email address",
-        "phone": "string | required | The guarantor's phone number",
-        "address": "string | required | The guarantor's street address",
-        "city": "string | required | The guarantor's city",
-        "state": "string | required | The guarantor's state/prov",
-        "zip": "string | required | The guarantor's zip/postal",
-        "ssn": "encrypted string | required | The guarantor's Social Security Number",
-        "percentage_owned": "string | required | The percentage owned"
+        "first_name": "string | The guarantor's first name",
+        "last_name": "string | The guarantor's last name",
+        "email": "string | The guarantor's email address",
+        "phone": "string | The guarantor's phone number",
+        "address": "string | The guarantor's street address",
+        "city": "string | The guarantor's city",
+        "state": "string | The guarantor's state/prov",
+        "zip": "string | The guarantor's zip/postal",
+        "ssn": "encrypted string | The guarantor's Social Security Number - See 'Encryption of Sensitive Data' Link",
+        "percentage_owned": "string | The percentage owned"
     }],
 
-    "owns_install_location": "boolean | optional | Indicates whether the customer owns the property where the equipment is being installed" 
+    "owns_install_location": "boolean | Indicates whether the customer owns the property where the equipment is being installed" 
 }
 ```
 
-_See [Encryption of Sensitive Data](../encryption.md) for information on encrypting sensitive fields like SSN._
+***Links***
 
-***Example***
+* [Product Types](./README.md#product-types)
+* [Company Structures](./README.md#company-structures)
+* [Encryption of Sensitive Data](../encryption.md)
+
+**Required Fields**
+
+| Field                       	    | Partial Credit Application 	| Full Credit Application (`is_full_application` = true) |
+|----------------------------------	|:-----------:	|:--------:	|
+| `type`                        	|      ●      	|     ●    	|
+| `is_full_application`            	|           	|     ●    	|
+| `total_amount`                	|             	|     ●    	|
+| `remote_id`                   	|             	|          	|
+| `products[]`                    	|             	|          	|
+| `products[].type`                	|      ●      	|     ●    	|
+| `products[].condition`           	|      ●      	|     ●    	|
+| `products[].product_code`       	|      ●      	|     ●    	|
+| `products[].name`                 |      ●      	|     ●    	|
+| `products[].description`        	|      ●      	|     ●    	|
+| `products[].quantity`           	|             	|          	|
+| `products[].price`              	|      ●      	|     ●    	|
+| `billing[]`                     	|             	|          	|
+| `billing[].charge`              	|      ●      	|     ●    	|
+| `billing[].description`         	|             	|          	|
+| `billing[].price`               	|      ●      	|     ●    	|
+| `company`                     	|             	|     ●    	|
+| `company.name`                	|             	|     ●    	|
+| `company.dba`                 	|             	|          	|
+| `company.phone`               	|             	|     ●    	|
+| `company.address`             	|             	|     ●    	|
+| `company.city`                	|             	|     ●    	|
+| `company.state`               	|             	|     ●    	|
+| `company.zip`                 	|             	|     ●    	|
+| `company.ein`                 	|             	|          	|
+| `company.years_in_business`   	|             	|     ●    	|
+| `company.structure`              	|             	|     ●    	|
+| `guarantors[]`                  	|      ●      	|          	|
+| `guarantors[].first_name`       	|             	|     ●    	|
+| `guarantors[].last_name`        	|             	|     ●    	|
+| `guarantors[].email`            	|      ●      	|     ●    	|
+| `guarantors[].phone`            	|             	|     ●    	|
+| `guarantors[].address`          	|             	|     ●    	|
+| `guarantors[].city`             	|             	|     ●    	|
+| `guarantors[].state`            	|             	|     ●    	|
+| `guarantors[].zip`              	|             	|     ●    	|
+| `guarantors[].ssn`              	|             	|     ●    	|
+| `guarantors[].percentage_owned` 	|             	|     ●    	|
+| `owns_install_location`       	|             	|          	|
+
+***Example - Partial Credit Application***
+
+Submitting a "partial" credit application starts the application process. The guarantors you list will receive an email containing a link for them to complete the application. This is the preferred submission method for vendors who do not know or do not want to handle the guarantor's sensitive information.
 
 ```json
 {
     "type": "business",
-    "total_amount":20000,
-    "remote_id":"eb9838f3-8d3f-fe24-eff0-d180d3fd513a",
+
+    "company": {
+        "name": "ABC Corp"
+    },
+
+    "guarantors": [{
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "john.doe@example.com"
+    }]
+}
+```
+
+***Example - Full Credit Application***
+
+A "full" credit application contains all information necessary to receive instant financing quotes. The guarantors you list will not be required to provide any additional information when you use this submission method.
+
+```json
+{
+    "type": "business",
+    "is_full_application": true,
+    "total_amount": 20733.89,
+    "remote_id": "eb9832f3-8d3f-fe24-eff0-d180d3fd513a",
 
     "products": [{
-        "product_code": "SBIR_Pr_Code",
-        "name": "Pepper",
-        "description": "Pepper",
-        "quantity": 3,
-        "price": 4000
+        "type": "restaurant",
+        "product_code": "ICE10000",
+        "name": "Ice Maker",
+        "description": "Capacities up to 2900 pounds per day",
+        "condition": "new",
+        "quantity": 2,
+        "price": 2830
     }, {
-        "product_code": "SBIR_Pr_Code",
-        "name": "Service Plan",
-        "description": "Service Plan",
-        "quantity": 1,
-        "price": 3000
+        "type": "restaurant",
+        "product_code": "CBG20388",
+        "name": "Gas Charbroiler",
+        "description": "24-inch gas broiler",
+        "condition": "new",
+        "quantity": 3,
+        "price": 777
+    }, {
+        "type": "restaurant",
+        "product_code": "RF38271",
+        "name": "Display Freezer",
+        "description": "Two-section display freezer",
+        "condition": "new",
+        "quantity": 2,
+        "price": 4992.3
     }],
 
     "billing": [{
         "charge": "Tax",
-        "description": "20 percent tax",
-        "price": 250
+        "description": "7 percent tax",
+        "price": 1258.29
     }, {
         "charge": "Delivery charge",
         "description": "Delivery charge",
-        "price": 100
+        "price": 1500
     }],
 
     "company": {
-        "name": "ABC Corp",
-        "dba": "ABC Corp [ optional ]",
-        "phone": "7815554433",
+        "name": "ABC Restaurant",
+        "dba": "ABC",
+        "phone": "7815555555",
         "address": "17 North Ave",
         "city": "Boston",
         "state": "MA",
         "zip": "01802",
         "ein": "00-0000000",
-        "years_in_business": 5
+        "years_in_business": 5,
+        "structure": "llc"
     },
 
     "guarantors": [{
-        "first_name": "Paul",
-        "last_name": "Testcase",
-        "email": "abc@xyz.com",
-        "phone": "7815554433",
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "john.doe@example.com",
+        "phone": "7815555555",
         "address": "16 Summer St",
         "city": "Boston",
         "state": "MA",
