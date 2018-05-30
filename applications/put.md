@@ -125,7 +125,7 @@ _See [Encryption of Sensitive Data](../encryption.md) for information on encrypt
 
 ## Success Response
 
-**Code** : `201 OK`
+**Code** : `200 OK`
 
 **Response Body**
 
