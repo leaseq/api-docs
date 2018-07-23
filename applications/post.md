@@ -21,6 +21,7 @@ Submit a new credit application to LeaseQ Platform.
     "is_full_application" : "boolean | A flag which indicates this application should be validated as a complete application that requires no additional information from guarantors",
     "total_amount": "number | The total amount to be financed",
     "remote_id": "string | An identifier that can be set to correlate LeaseQ applications with entities in other systems. This field is searchable in the LeaseQ dashboard",
+    "owns_install_location": "boolean | Indicates whether the customer owns the property where the equipment is being installed",
 
     "products": [{
         "type": "string | The product type - See 'Product Types' link",
@@ -64,7 +65,11 @@ Submit a new credit application to LeaseQ Platform.
         "percentage_owned": "string | The percentage owned"
     }],
 
-    "owns_install_location": "boolean | Indicates whether the customer owns the property where the equipment is being installed" 
+    "sales_representative": {
+        "first_name": "string | The sales representative's first name",
+        "last_name": "string | The sales representative's last name",
+        "email": "string | The sales representative's email address"
+    }
 }
 ```
 
@@ -82,6 +87,7 @@ Submit a new credit application to LeaseQ Platform.
 | `is_full_application`            	|           	|     ●    	|
 | `total_amount`                	|             	|     ●    	|
 | `remote_id`                   	|             	|          	|
+| `owns_install_location`       	|             	|          	|
 | `products[]`                    	|             	|          	|
 | `products[].type`                	|      ●      	|     ●    	|
 | `products[].condition`           	|      ●      	|     ●    	|
@@ -116,7 +122,10 @@ Submit a new credit application to LeaseQ Platform.
 | `guarantors[].zip`              	|             	|     ●    	|
 | `guarantors[].ssn`              	|             	|     ●    	|
 | `guarantors[].percentage_owned` 	|             	|     ●    	|
-| `owns_install_location`       	|             	|          	|
+| `sales_representative`         	|             	|         	|
+| `sales_representative.first_name`	|       ●     	|     ●   	|
+| `sales_representative.last_name`	|       ●     	|     ●   	|
+| `sales_representative.email`  	|       ●     	|     ●   	|
 
 ***Example - Partial Credit Application***
 
@@ -209,7 +218,13 @@ A "full" credit application contains all information necessary to receive instan
         "zip": "01801",
         "ssn": "hd17v6cWi2ltvwcLi6IDj4rhpkV+fafQOWg8yY756FwB46+POrecRj1dUg+xUcxW7lHtp0WKppB810+Ut++9uWNr6YJvzzemThrKykVw71qfq5ParS2p1YRCwGgfqJNb92V5KasrysMp+gM2kq6QdiSUWN9WhUP/6dkOnR+1CTCe68sS7zLI0JG394X196YN/ERasM5QhNSihQoOlsjw166wZMegviEb2EEm2zKp8A7jchL0ahJFsVO4aXmREIbCuE4jXY6OazWv7aF1BB5jvE7Hdw9SgXPMb/9+HTDOnLkIPqxEuxjZPR6bv6hImFBdeLa7J4xsPMJtghhla3GdndT7Okgn1/Qoq5Wjg1RzvFVp2rsYIMx9YVP74N69ga8f8e1PNd6T4V6coQRAP4U9IGb23BDAINxVbL5mae/LGDSsA6tdaT2pwGmJ90gyioutUSCNPR202zAKYY9280BKphp+GhERsSRKP+yBWCgc5EEJOKSqO/BcNbO3ckmfaNPOSHBnenjfaPogY0KM7jwVZIY5w+6itcOUrMpFLycxZLlqUWo6MOvn/CTsKWkm75uXv0dk/BPDgV1pj4ErMe1ifZyAN0SGF3n/9gSvqqI9IRRhELs5AMM/2AT+O8EDmRxvgO1XIwOu/gzeJ9pyQ1pkF06dlCpmlvTD6s6QZVNTa6s=",
         "percentage_owned": "100"
-    }]
+    }],
+
+    "sales_representative": {
+        "first_name": "Jane",
+        "last_name": "Doe",
+        "email": "jane.doe@example.com"
+    }
 }
 ```
 
